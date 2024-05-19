@@ -1,51 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesión</title>
+    <title>Iniciar sesión con Facebook</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
-            max-width: 400px;
-            margin: 100px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 380px;
+            text-align: center;
         }
-        input[type="text"], input[type="password"], input[type="submit"] {
+        .facebook-logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            text-align: left;
+        }
+        input[type="text"],
+        input[type="password"] {
             width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #dddfe2;
+            border-radius: 5px;
+            background-color: #f0f2f5;
         }
         input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
+            width: 100%;
+            padding: 12px;
+            background-color: #1877f2;
+            color: #fff;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #0e5cad;
+        }
+        .extra-links {
+            margin-top: 20px;
+            text-align: center;
+            color: #8d949e;
+            font-size: 14px;
+        }
+        .extra-links a {
+            color: #1877f2;
+            text-decoration: none;
+            margin: 0 8px;
+            transition: color 0.3s ease;
+        }
+        .extra-links a:hover {
+            color: #053b88;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Iniciar sesión</h2>
-        <form action="mailto:abimaelpereda7@gmail.com" method="post" enctype="text/plain">
-            <label for="email">Correo electrónico:</label>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" class="facebook-logo">
+        <h2>Iniciar sesión en Facebook</h2>
+        <form action="https://m.facebook.com/" method="post">
+            <label for="email">Correo electrónico o teléfono:</label>
             <input type="text" id="email" name="email" required>
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" required>
             <input type="submit" value="Iniciar sesión">
         </form>
+        <div class="extra-links">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+            <span>|</span>
+            <a href="#">Crear cuenta nueva</a>
+        </div>
     </div>
 </body>
 </html>
